@@ -25,3 +25,10 @@ Your task is to predict, for each customer_ID, the probability of a future payme
 Note that the negative class has been subsampled for this dataset at 5%, and thus receives a 20x weighting in the scoring metric."
 
 **The training data and testing data files are too large to upload here, so they will need to be accessed through the Kaggle competition site:** https://www.kaggle.com/competitions/amex-default-prediction/data
+
+## My Approach
+1. Clean data to remove variables with potential to cause multicollinearity - used VIF to determine these variables
+2. Impute missing data for numerical variables using median imputation and mode imputation for categorical variables
+3. Partition data into train and test sections - used 10,000 observations for each since dataset is so large
+4. Fit Classficiation Tree, Random Forest Model, and Bagging Model
+5. Used SVM for final model - achieved 85% accuracy
